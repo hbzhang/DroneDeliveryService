@@ -12,6 +12,9 @@ class NewOrderForm : AppCompatActivity() {
 
         create_new_order.setOnClickListener {
 
+
+            
+
             val intent = Intent(this, ProductNumber::class.java)
             startActivity(intent)
         }
