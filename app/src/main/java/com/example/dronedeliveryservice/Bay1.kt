@@ -10,7 +10,7 @@ class Bay1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bay1)
-
+    // TODO: hello there
         dashboard.setOnClickListener{
             val intent1 = Intent(this, BayDashboard::class.java)
             startActivity(intent1)
