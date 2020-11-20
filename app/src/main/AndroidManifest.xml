@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dronedeliveryservice">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DroneDeliveryService">
+        <activity android:name=".OrderForm"></activity>
+        <activity android:name=".OrderForm1" />
+        <activity android:name=".ProductNumber" />
+        <activity android:name=".ProductDimensions" />
+        <activity android:name=".ProductWeight" />
+        <activity android:name=".ProductName" />
+        <activity android:name=".NewOrderForm" />
+        <activity android:name=".SelectionPage" />
+        <activity android:name=".selection_page" />
+        <activity android:name=".new_order_page" />
+        <activity android:name=".Bay2" />
+        <activity android:name=".ActionsPage" />
+        <activity android:name=".Actions" />
+        <activity android:name=".OrderInfo" />
+        <activity android:name=".Bay1" />
+        <activity android:name=".BayDashboard" />
+        <activity android:name=".drone_dashboard" />
+        <activity android:name=".StartPage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

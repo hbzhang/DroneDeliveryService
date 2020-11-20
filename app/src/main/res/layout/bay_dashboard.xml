@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bay1">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="393dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginBottom="716dp"
+        android:background="#A3A3A3"
+        android:gravity="center"
+        android:text="BAY DASHBOARD"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="369dp"
+        android:layout_height="604dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay1"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 1"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="        ACTIVE | READY"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay2"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 2"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="        ACTIVE | READY"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay3"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 3"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="        ACTIVE | READY"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay4"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 4"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="        ACTIVE | READY"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay5"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 5"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="        ACTIVE | READY"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay6"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 6"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="        ACTIVE | READY"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay7"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 7"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="        ACTIVE | READY"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay8"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 8"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="        ACTIVE | READY"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay9"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 9"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="        ACTIVE | READY"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay10"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 10"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="        ACTIVE | READY"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="412dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="654dp"
+        android:backgroundTint="@color/white"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/dashboard_nav_button"
+        android:layout_width="135dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="654dp"
+        android:layout_marginEnd="276dp"
+        android:layout_marginRight="276dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/dashboard_logo_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/orders_nav_button"
+        android:layout_width="135dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginLeft="138dp"
+        android:layout_marginTop="654dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginRight="138dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/order_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/maps_nav_button"
+        android:layout_width="135dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="277dp"
+        android:layout_marginLeft="277dp"
+        android:layout_marginTop="654dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/map_logo_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
