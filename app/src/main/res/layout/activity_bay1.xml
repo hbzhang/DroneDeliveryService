@@ -27,7 +27,7 @@
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
-        android:layout_width="173dp"
+        android:layout_width="172dp"
         android:layout_height="28dp"
         android:layout_marginStart="199dp"
         android:layout_marginLeft="199dp"

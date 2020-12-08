@@ -234,7 +234,7 @@
 
     <Button
         android:id="@+id/order_infoBtn"
-        android:layout_width="161dp"
+        android:layout_width="162dp"
         android:layout_height="51dp"
         android:layout_marginStart="203dp"
         android:layout_marginLeft="203dp"
