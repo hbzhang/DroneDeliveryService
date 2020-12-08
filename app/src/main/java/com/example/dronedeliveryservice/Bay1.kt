@@ -5,12 +5,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_bay1.*
 
-
 class Bay1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bay1)
-    // TODO: hello there
+    // TODO: Does this commit work?
         dashboard.setOnClickListener{
             val intent1 = Intent(this, BayDashboard::class.java)
             startActivity(intent1)
