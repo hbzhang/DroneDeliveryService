@@ -5,28 +5,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Bay1">
 
-
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
-        android:layout_width="368dp"
-        android:layout_height="213dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="435dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="75dp"
-        android:foreground="@drawable/googlemaps"
-        android:visibility="visible"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="431dp"
+        android:layout_height="887dp"
+        android:alpha="0.3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/homescreen_background" />
 
 
-    <Spinner
+    <TextView
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="172dp"
         android:layout_height="28dp"
@@ -38,8 +32,11 @@
         android:layout_marginBottom="685dp"
         android:background="#B1B1B1"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
-        android:text=""
+        android:text="12345"
+        android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,8 +54,10 @@
         android:layout_marginBottom="644dp"
         android:background="#B1B1B1"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
-        android:text=""
+        android:text="USB Adapter"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,14 +75,16 @@
         android:layout_marginBottom="603dp"
         android:background="#B1B1B1"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
-        android:text=""
+        android:text="0.55lbs"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
+    <TextView
         android:id="@+id/weight_class_spinner"
         android:layout_width="172dp"
         android:layout_height="28dp"
@@ -95,13 +96,16 @@
         android:layout_marginBottom="483dp"
         android:background="#B1B1B1"
         android:ems="10"
-        android:textSize="5dp"
+        android:gravity="center"
+        android:text="Light"
+        android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
+    <TextView
         android:id="@+id/dimensions_spinner"
         android:layout_width="172dp"
         android:layout_height="28dp"
@@ -114,6 +118,7 @@
         android:background="#B1B1B1"
         android:ems="10"
         android:gravity="center"
+        android:text="2x2x2"
         android:textColor="@color/white"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -136,7 +141,7 @@
         android:gravity="center"
         android:inputType="textPersonName"
         android:text="ACTIVE"
-        android:textColor="#228026"
+        android:textColor="@color/white"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -158,7 +163,7 @@
         android:gravity="center"
         android:inputType="textPersonName"
         android:text="WAITING"
-        android:textColor="#CDDC39"
+        android:textColor="@color/white"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -166,56 +171,34 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/droneinfo_btn"
-        android:layout_width="371dp"
-        android:layout_height="51dp"
+        android:id="@+id/drone_info_btn"
+        android:layout_width="381dp"
+        android:layout_height="79dp"
         android:layout_marginStart="11dp"
-
         android:layout_marginLeft="11dp"
-        android:layout_marginTop="428dp"
         android:layout_marginEnd="11dp"
         android:layout_marginRight="11dp"
-        android:layout_marginBottom="328dp"
+        android:layout_marginBottom="308dp"
         android:text="DRONE INFO"
         android:textColor="@color/white"
         android:textSize="18dp"
         app:backgroundTint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="393dp"
+        android:layout_width="433dp"
         android:layout_height="39dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="716dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="689dp"
         android:background="#A3A3A3"
         android:gravity="center"
         android:text="BAY 1 - ORDER INFO"
         android:textColor="@color/white"
         android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/dashboard_btn1"
-        android:layout_width="371dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="381dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
-        android:layout_marginBottom="374dp"
-        android:text="DASHBOARD"
-        android:textColor="@color/white"
-        android:textSize="18dp"
-        app:backgroundTint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -236,6 +219,7 @@
         android:background="@drawable/textview_border"
         android:gravity="center"
         android:text="ORDER NUMBER"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -256,6 +240,7 @@
         android:background="@drawable/textview_border"
         android:gravity="center"
         android:text="PRODUCT NAME"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -276,6 +261,7 @@
         android:background="@drawable/textview_border"
         android:gravity="center"
         android:text="PRODUCT WEIGHT"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -296,6 +282,7 @@
         android:background="@drawable/textview_border"
         android:gravity="center"
         android:text="DIMENSIONS"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -316,6 +303,7 @@
         android:background="@drawable/textview_border"
         android:gravity="center"
         android:text="WEIGHT CLASS"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -336,6 +324,7 @@
         android:background="@drawable/textview_border"
         android:gravity="center"
         android:text="STATUS"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -356,6 +345,20 @@
         android:background="@drawable/textview_border"
         android:gravity="center"
         android:text="ACTION"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="412dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="654dp"
+        android:backgroundTint="@color/white"
+        android:text=""
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -405,6 +408,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="363dp"
+        android:layout_height="209dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="437dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="85dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

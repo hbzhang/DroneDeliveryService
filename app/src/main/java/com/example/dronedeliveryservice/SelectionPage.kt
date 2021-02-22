@@ -16,7 +16,7 @@ class SelectionPage : AppCompatActivity() {
         }
 
         create_new_order.setOnClickListener {
-            val intent1 = Intent(this, ProductNumber::class.java)
+            val intent1 = Intent(this, OrderEntry::class.java)
             startActivity(intent1)
         }
 

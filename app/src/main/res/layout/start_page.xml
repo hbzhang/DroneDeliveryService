@@ -34,20 +34,16 @@
 
     <Button
         android:id="@+id/enter_btn"
-        android:layout_width="237dp"
-        android:layout_height="58dp"
-        android:layout_marginStart="159dp"
-        android:layout_marginLeft="159dp"
-        android:layout_marginTop="800dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginRight="159dp"
-        android:layout_marginBottom="266dp"
+        android:layout_width="428dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="595dp"
+        android:layout_marginBottom="69dp"
         android:text="ENTER"
         android:textColor="@color/white"
+        android:textSize="20dp"
         app:backgroundTint="#737373"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -12,7 +12,7 @@ class StartPage : AppCompatActivity() {
         setContentView(R.layout.start_page)
 
         enter_btn.setOnClickListener {
-            val intent = Intent(this, SelectionPage::class.java)
+            val intent = Intent(this, Login_Register_Page::class.java)
             startActivity(intent)
             }
         }

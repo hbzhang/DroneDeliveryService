@@ -5,15 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Bay1">
+
 
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="393dp"
+        android:layout_width="433dp"
         android:layout_height="39dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="716dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="691dp"
         android:background="#A3A3A3"
         android:gravity="center"
         android:text="BAY DASHBOARD"
@@ -21,7 +23,6 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,11 +37,12 @@
         android:layout_marginBottom="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.333">
+
 
 
         <TableLayout
@@ -48,6 +50,7 @@
             android:layout_height="wrap_content">
 
             <TableRow>
+
 
                 <Button
                     android:id="@+id/dashboard_bay1"
@@ -60,7 +63,8 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="        ACTIVE | READY"
+                    android:text="          LIGHT | READY"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
@@ -78,7 +82,8 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="        ACTIVE | READY"
+                    android:text="          LIGHT | READY"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
@@ -96,7 +101,8 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="        ACTIVE | READY"
+                    android:text="          LIGHT | READY"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
@@ -114,7 +120,8 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="        ACTIVE | READY"
+                    android:text="      MEDIUM | READY"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
@@ -132,7 +139,8 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="        ACTIVE | READY"
+                    android:text="      MEDIUM | READY"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
@@ -150,10 +158,12 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="        ACTIVE | READY"
+                    android:text="      MEDIUM | READY"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
+
 
             <TableRow>
 
@@ -168,12 +178,14 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="        ACTIVE | READY"
+                    android:text="         HEAVY | READY"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
 
             <TableRow>
+
 
                 <Button
                     android:id="@+id/dashboard_bay8"
@@ -186,7 +198,8 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="        ACTIVE | READY"
+                    android:text="         HEAVY | READY"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
@@ -204,7 +217,8 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="        ACTIVE | READY"
+                    android:text="         HEAVY | READY"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
@@ -222,7 +236,8 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="        ACTIVE | READY"
+                    android:text="         HEAVY | READY"
+                    android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
@@ -237,6 +252,7 @@
         android:layout_marginTop="654dp"
         android:backgroundTint="@color/white"
         android:text=""
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -272,6 +288,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <ImageButton
         android:id="@+id/maps_nav_button"
         android:layout_width="135dp"
@@ -281,6 +298,23 @@
         android:layout_marginTop="654dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/map_logo_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="117dp"
+        android:layout_marginLeft="117dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="117dp"
+        android:layout_marginRight="117dp"
+        android:layout_marginBottom="655dp"
+        android:text="***Bay 1 - Recommended***"
+        android:textColor="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

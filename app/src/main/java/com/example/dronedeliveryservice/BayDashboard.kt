@@ -33,7 +33,7 @@ class BayDashboard : AppCompatActivity() {
             startActivity(intent)
         }
         maps_nav_button.setOnClickListener {
-            val intent3 = Intent(this, ActionsPage::class.java)
+            val intent3 = Intent(this, MainMap::class.java)
             startActivity(intent3)
         }
 

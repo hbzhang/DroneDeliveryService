@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dronedeliveryservice">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- Google MAP API key -->
+    <meta-data
+        android:name="com.google.android.maps.v2.API_KEY"
+        android:value="AIzaSyA5hLn9fylUBJ02oOFREh7koR19B-lmBFc" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -8,23 +25,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DroneDeliveryService">
-        <activity android:name=".OrderForm"></activity>
-        <activity android:name=".OrderForm1" />
-        <activity android:name=".ProductNumber" />
-        <activity android:name=".ProductDimensions" />
-        <activity android:name=".ProductWeight" />
-        <activity android:name=".ProductName" />
-        <activity android:name=".NewOrderForm" />
+        <activity android:name=".Login_Register_Page"></activity>
+        <activity android:name=".MainMap" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".OrderForm" />
+        <activity android:name=".OrderEntry" />
         <activity android:name=".SelectionPage" />
-        <activity android:name=".selection_page" />
-        <activity android:name=".new_order_page" />
         <activity android:name=".Bay2" />
         <activity android:name=".ActionsPage" />
-        <activity android:name=".Actions" />
         <activity android:name=".OrderInfo" />
         <activity android:name=".Bay1" />
         <activity android:name=".BayDashboard" />
-        <activity android:name=".drone_dashboard" />
         <activity android:name=".StartPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
