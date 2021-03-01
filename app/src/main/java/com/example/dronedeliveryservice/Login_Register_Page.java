@@ -17,7 +17,7 @@ public class Login_Register_Page extends AppCompatActivity implements View.OnCli
         Button actions_intent = (Button) findViewById(R.id.continue_btn);
         actions_intent.setOnClickListener(this);
     }
-
+//
     @Override
     public void onClick(View v) {
 
