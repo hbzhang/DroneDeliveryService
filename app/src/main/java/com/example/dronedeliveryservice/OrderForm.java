@@ -15,6 +15,7 @@ public class OrderForm extends AppCompatActivity {
     TextView product_weight_output;
     TextView product_dimensions_output;
     TextView product_weight_class_output;
+    TextView bay_sel_output;
 
 
 
@@ -28,7 +29,7 @@ public class OrderForm extends AppCompatActivity {
     product_weight_output = (TextView)findViewById(R.id.get_product_weight);
     product_dimensions_output = (TextView)findViewById(R.id.get_product_dimensions);
     product_weight_class_output = (TextView)findViewById(R.id.get_product_weight_class);
-
+    //bay_sel_output = (TextView)findViewById(R.id.get_bay_sel);
     Intent intent = getIntent();
 
     String product_name_key = intent.getStringExtra("product_name_key");
@@ -36,6 +37,7 @@ public class OrderForm extends AppCompatActivity {
     String product_weight_key = intent.getStringExtra("product_weight_key");
     String product_dimensions_key = intent.getStringExtra("product_dimensions_key");
     String product_weight_class_key = intent.getStringExtra("product_weight_class_key");
+    String bay_sel_key = intent.getStringExtra("bay_sel_key");
 
 
     product_name_output.setText(product_name_key);
@@ -43,6 +45,7 @@ public class OrderForm extends AppCompatActivity {
     product_weight_output.setText(product_weight_key);
     product_dimensions_output.setText(product_dimensions_key);
     product_weight_class_output.setText(product_weight_class_key);
+
 
     Button choose_bay_btn = (Button)findViewById(R.id.choose_bay_btn);
     choose_bay_btn.setOnClickListener(new View.OnClickListener() {

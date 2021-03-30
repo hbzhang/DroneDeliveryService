@@ -1,114 +1,172 @@
 package com.example.dronedeliveryservice;
 
-import java.util.Scanner;
-import java.sql.*;
+import android.content.Intent;
 
-public class PriorityAlgorithm {
-	
-	public static int algoWeight(Bay[] bay, Package p1) {
-		
-		int wClass=0;//0 is default, 1=small, 2=medium, 3=large
-		double weight = p1.getWeight();
-		//System.out.println(weight);
-		if(weight<=1.0) {
-			wClass=1;
+import java.util.Scanner;
+import java.sql.Connection;
+import java.sql.*;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class PriorityAlgorithm extends AppCompatActivity{
+
+	private Connection connect = null;
+	private Statement statement = null;
+	private PreparedStatement preparedStatement = null;
+	private ResultSet resultSet = null;
+	int dist;
+
+
+	public void readDataBase() throws Exception {
+
+		try {
+			// This will load the MySQL driver, each DB has its own driver
+			Class.forName("com.mysql.jdbc.Driver");
+			// Setup the connection with the DB
+			connect = DriverManager
+					.getConnection("jdbc:mysql://199.244.104.202:9866/aerialadvantage?"
+							+ "user=cis&password=Leopard8080$$");
+
+			// Statements allow to issue SQL queries to the database
+			statement = connect.createStatement();
+			// Result set get the result of the SQL query
+			resultSet = statement
+					.executeQuery("select distance from delivery_info where distance");
+			writeResultSet(resultSet);
+			dist = sendResultSet(resultSet);
+
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			close();
 		}
-		if(weight>1.0&&weight<=2.0) {
-			wClass=2;
+
+	}
+
+	private void writeMetaData(ResultSet resultSet) throws SQLException {
+		//  Now get some metadata from the database
+		// Result set get the result of the SQL query
+
+		System.out.println("The columns in the table are: ");
+
+		System.out.println("Table: " + resultSet.getMetaData().getTableName(1));
+		for  (int i = 1; i<= resultSet.getMetaData().getColumnCount(); i++){
+			System.out.println("Column " +i  + " "+ resultSet.getMetaData().getColumnName(i));
 		}
-		if(weight>2.0&&weight<=5.0) {
-			wClass=3;
+	}
+
+	private void writeResultSet(ResultSet resultSet) throws SQLException {
+		// ResultSet is initially before the first data set
+		System.out.println("Tables: ");
+		while (resultSet.next()) {
+			String dist = resultSet.getString(1);
+			System.out.println(dist);
 		}
+	}
+
+	private int sendResultSet(ResultSet resultSet) throws SQLException{
+		String distance ="";
+		while (resultSet.next()){
+			distance=resultSet.getString(1);
+		}
+		return Integer.parseInt(distance);
+	}
+
+	private void close() {
+		try {
+			if (resultSet != null) {
+				resultSet.close();
+			}
+
+			if (statement != null) {
+				statement.close();
+			}
+
+			if (connect != null) {
+				connect.close();
+			}
+		} catch (Exception e) {
+
+		}
+	}
+
+	public static int transfer(String dist){
+		int dist1 = Integer.parseInt(dist);
+		return dist1;
+	}
+
+	public static int superAlgo(int[] bayC, int dist, int[] batt, int weight) {
+		//In this algorithm we focus on getting the max number of packages the appropriate drone
+		int c = weightClass(weight);
+		System.out.println("Weight class is "+c);
+
+		for(int i=0;i<bayC.length;i++) {
+
+			if(bayC[i]==c&&batt[i]>=90&&dist<=10) {
+				System.out.println("system 1");
+				return i;
+			}
+			else if(bayC[i]==c&&dist<=5&&batt[i]>50) {
+				System.out.println("system 2");
+				return i;
+			}
+			else if(c>1&&bayC[i]==(c-1)&&batt[i]>90) {
+				System.out.println("system 3");
+				return i;
+			}
+			else if(c>1&&bayC[i]==(c-1)&&dist<5&&batt[i]==100) {
+				System.out.println("system 4");
+				return i;
+			}
+			else if(c>2&&bayC[i]==(c-2)&&dist<3&&batt[i]==100) {
+				System.out.println("system 5");
+				return i;
+			}
+			else if(c!=3&&bayC[i]==(c+1)&&batt[i]>50) {
+				System.out.println("system 6");
+				return i;
+			}
+			else if(c==1&&bayC[i]==(c+2)&&batt[i]>30) {
+				System.out.println("system 7");
+				return i;
+			}
+			else if(dist<1&&batt[i]>20) {
+				System.out.println("system 8");
+				return i;
+			}
+		}
+
+		return -2;
+	}
+
+	public static int weightClass(int weight) {
+		if(weight>=3&&weight<=5)
+			return 3;
+		if(weight>0&&weight<2)
+			return 1;
+		if(weight>=2&&weight<3)
+			return 2;
 		else {
-			weight = -1;
+			System.out.println("Package is too heavy");
+			return -1;
 		}
-		//System.out.println(wClass);
-		for(int i=0;i<bay.length;i++) {
-			if(bay[i].getWeight()==wClass) {
-				return bay[i].getID();
-			}		
-		}
-		return -1;
 	}
 	
-	public static int algoBat(Bay[] bay, java.lang.Package p1, Drone[] drone) {
-		double [] bat = new double[drone.length];
-		boolean [] highBat = new boolean[drone.length];
-		for(int i=0;i<drone.length;i++) {	
-			bat[i]=drone[i].getBattery();
-		}
-		
-		
-		
-		return -1;
-	}
-	
-	public static int algoDist(Bay[] bay, Package p1) {
-		double distance=p1.getDistance();
-		
-		return -1;
-	}
-	
-	public static void main(String ags[]) {
-		Scanner input = new Scanner(System.in);
-		Bay [] bay = new Bay[10];
-		Drone [] drone = new Drone[10];
-		for(int i=0;i<bay.length;i++) {
-			int rand = (int)(Math.random()*2)+1;
-			int weight = (int)(Math.random()*3)+1;
-			Boolean bool = false;
-			if(rand==1) {
-				bool = true;
-			}
-			bay[i]= new Bay(i,bool);
-			if(bool==true) {
-				bay[i].setWeight(weight);
-				//drone[i].setID((int)(Math.random()*1000)+1);
-				//drone[i].setBattery((int)(Math.random()*100)+1);
-			}
-			/*else {
-				drone[i].setID(-1);
-				drone[i].setBattery(-1);
-			}*/
-				
-		}
-		
-		for(int i=0;i<=bay.length-1;i++) {
-			System.out.print("Bay: ");
-			System.out.print(bay[i].getID());
-			System.out.print("| status: ");
-			System.out.format("%5s",bay[i].getReady());
-			System.out.print("| weight class: ");
-			int weight =bay[i].getWeight();
-			if(weight==1)
-				System.out.print("small");
-			if(weight==2)
-				System.out.print("medium");
-			if(weight==3)
-				System.out.print("large");
-			System.out.println("");
-		}
-		
-		System.out.println("Enter the weight of the package");
-		double wClass=0;
-		wClass = input.nextDouble();
-		Package p1 = new Package(wClass);
-		System.out.print("Omptomized bay is: ");
-		System.out.print(algoWeight(bay,p1));
-		/*try{  
-			Class.forName("com.mysql.jdbc.Driver");  
-			Connection con=DriverManager.getConnection(  
-			"jdbc:mysql://199.244.104.202:9866/aerialadvantage","ubuntu","Cis1277649");
-			//here aerialadvantage is database name, root is username and password
-			Statement stmt=con.createStatement();  
-			ResultSet rs=stmt.executeQuery("select droneID from drone_info");
-			Resultset rs1=stmt.executeQuery("select weightClass from item_info");
-			while(rs.next())  
-			System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
-			con.close();  
-			}
-		catch(Exception e){ System.out.println(e);}*/ 
-		
+	public void main(String ags[]){
+		Intent intent2 = getIntent();
+		String product_weight_key = intent2.getStringExtra("product_weight_key");
+
+		int [] bay = {1,1,2,2,3,3};
+		int [] batt = {80,70,90,40,85,100};
+		int weight = Integer.parseInt(product_weight_key);
+		int baySel = superAlgo(bay,dist,batt,weight);
+		Intent intent = new Intent(getApplicationContext(), PriorityAlgorithm.class);
+		intent.putExtra("bay_sel_key", baySel);
 	}
  
 }

@@ -17,6 +17,7 @@ public class OrderEntry extends AppCompatActivity {
     EditText enter_dimensions;
     EditText enter_weight_class;
 
+
     Button submit_btn_id;
 
     @Override
@@ -45,6 +46,7 @@ public class OrderEntry extends AppCompatActivity {
                 String product_weight_class_str = enter_weight_class.getText().toString();
 
 
+
                 Intent intent = new Intent(getApplicationContext(), OrderForm.class);
 
                 intent.putExtra("product_name_key", product_name_str);
@@ -52,9 +54,15 @@ public class OrderEntry extends AppCompatActivity {
                 intent.putExtra("product_weight_key", product_weight_str);
                 intent.putExtra("product_dimensions_key", product_dimensions_str);
                 intent.putExtra("product_weight_class_key", product_weight_class_str);
+                intent.putExtra("product_weight_key",product_weight_str);
+
+
+                Intent intent2 = new Intent(getApplicationContext(), PriorityAlgorithm.class);
+                intent2.putExtra("product_weight_key", product_weight_str);
 
                 // start the Intent
                 startActivity(intent);
+                startActivity(intent2);
             }
         });
     }
