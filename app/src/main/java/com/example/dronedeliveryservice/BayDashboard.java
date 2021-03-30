@@ -3,6 +3,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -16,6 +18,10 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
 
         Button dashboard_bay1 = (Button) findViewById(R.id.dashboard_bay1);
         dashboard_bay1.setOnClickListener(this);
+
+        setContentView(R.layout.bay_dashboard);
+        TextView textView = (TextView) findViewById(R.id.bay_rec);
+        textView.setText("text you want to display");
 
     }
 

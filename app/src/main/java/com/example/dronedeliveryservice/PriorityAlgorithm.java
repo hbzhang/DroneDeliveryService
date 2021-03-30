@@ -165,8 +165,7 @@ public class PriorityAlgorithm extends AppCompatActivity{
 		int [] batt = {80,70,90,40,85,100};
 		int weight = Integer.parseInt(product_weight_key);
 		int baySel = superAlgo(bay,dist,batt,weight);
-		Intent intent = new Intent(getApplicationContext(), PriorityAlgorithm.class);
-		intent.putExtra("bay_sel_key", baySel);
+
 	}
  
 }

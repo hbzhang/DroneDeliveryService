@@ -101,7 +101,7 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="      MEDIUM | READY"
+                    android:text="          LIGHT | READY"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
@@ -139,7 +139,7 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="         HEAVY | READY"
+                    android:text="      MEDIUM | READY"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
@@ -158,20 +158,89 @@
                     app:backgroundTint="#757575" />
 
                 <TextView
-                    android:text="         HEAVY | READY"
+                    android:text="      MEDIUM | READY"
                     android:textColor="@color/black"
                     android:textSize="20dp" />
 
             </TableRow>
 
 
-            <TableRow/>
+            <TableRow>
 
-            <TableRow/>
+                <Button
+                    android:id="@+id/dashboard_bay7"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 7"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
 
-            <TableRow/>
+                <TextView
+                    android:text="         HEAVY | READY"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
 
-            <TableRow/>
+            </TableRow>
+
+            <TableRow>
+
+
+                <Button
+                    android:id="@+id/dashboard_bay8"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 8"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="         HEAVY | READY"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay9"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 9"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="         HEAVY | READY"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/dashboard_bay10"
+                    android:layout_width="150dp"
+                    android:layout_height="90dp"
+                    android:gravity="center"
+                    android:text="BAY 10"
+                    android:textColor="@color/white"
+                    android:textSize="35dp"
+                    app:backgroundTint="#757575" />
+
+                <TextView
+                    android:text="         HEAVY | READY"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+            </TableRow>
 
         </TableLayout>
     </ScrollView>
@@ -244,7 +313,7 @@
         android:layout_marginEnd="117dp"
         android:layout_marginRight="117dp"
         android:layout_marginBottom="655dp"
-        android:text="***Bay 1 - Recommended***"
+        android:text="***Bay 2 - Recommended***"
         android:textColor="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
