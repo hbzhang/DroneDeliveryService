@@ -15,7 +15,8 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
 
     public static int baySel;
     //int baySel=0;
-    public static void main (String[] args) {
+    public static void client () {
+
         try {
             Socket s=new Socket("10.12.18.102",6666);
             DataOutputStream dout=new DataOutputStream(s.getOutputStream());
@@ -45,25 +46,7 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
 
         Button dashboard_bay1 = (Button) findViewById(R.id.dashboard_bay1);
         dashboard_bay1.setOnClickListener(this);
-        try {
-            Socket s=new Socket("10.12.18.102",6666);
-            DataOutputStream dout=new DataOutputStream(s.getOutputStream());
-            dout.writeInt(3);
-            dout.flush();
-            dout.writeInt(2);
-            dout.close();
-            s.close();
-
-        }
-        catch (Exception e){System.out.println(e);}
-        try {
-            ServerSocket ss=new ServerSocket(6666);
-            Socket s=ss.accept();
-            DataInputStream dis=new DataInputStream(s.getInputStream());
-            baySel=dis.readInt();
-            System.out.println("baySel = "+baySel+1);
-            ss.close();
-        }catch(Exception e){System.out.println(e);}
+        client();
         String BaySel = "Bay: "+String.valueOf(baySel);
         setContentView(R.layout.bay_dashboard);
         TextView textView = (TextView) findViewById(R.id.bay_rec);
