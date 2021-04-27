@@ -4,12 +4,39 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import java.io.*;
+import java.net.*;
 
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 
 public class BayDashboard extends AppCompatActivity implements View.OnClickListener {
+
+    private static int baySel;
+    //int baySel=0;
+    public static void main (String args []) {
+        try {
+            Socket s=new Socket("10.12.18.102",6666);
+            DataOutputStream dout=new DataOutputStream(s.getOutputStream());
+            dout.writeInt(3);
+            dout.flush();
+            dout.writeInt(2);
+            dout.close();
+            s.close();
+
+        }
+        catch (Exception e){System.out.println(e);}
+        try {
+            ServerSocket ss=new ServerSocket(6666);
+            Socket s=ss.accept();
+            DataInputStream dis=new DataInputStream(s.getInputStream());
+            baySel=dis.readInt();
+            System.out.println("baySel = "+baySel);
+            ss.close();
+        }catch(Exception e){System.out.println(e);}
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +48,7 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.bay_dashboard);
         TextView textView = (TextView) findViewById(R.id.bay_rec);
-        textView.setText("text you want to display");
+        textView.setText("**Bay "+baySel+"**");
 
     }
 
