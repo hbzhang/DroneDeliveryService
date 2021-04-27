@@ -13,7 +13,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 
 public class BayDashboard extends AppCompatActivity implements View.OnClickListener {
 
-    private static int baySel;
+    public static int baySel;
     //int baySel=0;
     public static void main (String args []) {
         try {
@@ -32,7 +32,7 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
             Socket s=ss.accept();
             DataInputStream dis=new DataInputStream(s.getInputStream());
             baySel=dis.readInt();
-            System.out.println("baySel = "+baySel);
+            System.out.println("baySel = "+baySel+1);
             ss.close();
         }catch(Exception e){System.out.println(e);}
 
@@ -48,7 +48,7 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
 
         setContentView(R.layout.bay_dashboard);
         TextView textView = (TextView) findViewById(R.id.bay_rec);
-        textView.setText("**Bay "+baySel+"**");
+        textView.setText("**Bay "+(baySel+1)+"**");
 
     }
 
