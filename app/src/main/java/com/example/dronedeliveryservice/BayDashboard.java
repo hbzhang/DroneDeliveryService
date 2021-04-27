@@ -48,7 +48,7 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
         String BaySel = "Bay: "+String.valueOf(baySel);
         setContentView(R.layout.bay_dashboard);
         TextView textView = (TextView) findViewById(R.id.bay_rec);
-        textView.setText("**Bay "+(baySel+2)+"**");
+        textView.setText(BaySel);
 
     }
 
