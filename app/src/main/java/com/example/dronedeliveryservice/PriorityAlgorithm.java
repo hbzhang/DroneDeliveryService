@@ -20,6 +20,7 @@ public class PriorityAlgorithm extends AppCompatActivity{
 	private PreparedStatement preparedStatement = null;
 	private ResultSet resultSet = null;
 	int dist;
+	public static int baySel;
 
 
 	public void readDataBase() throws Exception {
@@ -39,6 +40,32 @@ public class PriorityAlgorithm extends AppCompatActivity{
 					.executeQuery("select distance from delivery_info where distance");
 			writeResultSet(resultSet);
 			dist = sendResultSet(resultSet);
+
+		} catch (Exception e) {
+			throw e;
+		} finally {
+			close();
+		}
+
+	}
+
+	public void sendDB(String x) throws Exception {
+
+		try {
+			// This will load the MySQL driver, each DB has its own driver
+			Class.forName("com.mysql.jdbc.Driver");
+			// Setup the connection with the DB
+			connect = DriverManager
+					.getConnection("jdbc:mysql://199.244.104.202:9866/aerialadvantage?"
+							+ "user=cis&password=Leopard8080$$");
+
+			// Statements allow to issue SQL queries to the database
+			statement = connect.createStatement();
+			// Result set get the result of the SQL query
+			resultSet = statement
+					.executeQuery(x);
+			writeResultSet(resultSet);
+			//dist = sendResultSet(resultSet);
 
 		} catch (Exception e) {
 			throw e;
@@ -164,7 +191,7 @@ public class PriorityAlgorithm extends AppCompatActivity{
 		int [] bay = {1,1,2,2,3,3};
 		int [] batt = {80,70,90,40,85,100};
 		int weight = Integer.parseInt(product_weight_key);
-		int baySel = superAlgo(bay,dist,batt,weight);
+		baySel = superAlgo(bay,dist,batt,weight);
 
 	}
  

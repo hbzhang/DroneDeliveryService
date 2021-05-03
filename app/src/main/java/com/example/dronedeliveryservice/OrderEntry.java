@@ -45,6 +45,13 @@ public class OrderEntry extends AppCompatActivity {
                 String product_dimensions_str = enter_dimensions.getText().toString();
                 String product_weight_class_str = enter_weight_class.getText().toString();
 
+                PriorityAlgorithm send1 = new PriorityAlgorithm();
+                String send = "insert into item_info VALUES("+product_number_str+", \""+product_name_str+"\", \""+product_name_str+"\", \""+product_weight_class_str+"\","+ product_weight_str+", \""+product_dimensions_str+"\");";
+                try {
+                    send1.sendDB(send);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
 
                 Intent intent = new Intent(getApplicationContext(), OrderForm.class);
