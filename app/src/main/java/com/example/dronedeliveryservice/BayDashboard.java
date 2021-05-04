@@ -1,6 +1,7 @@
 package com.example.dronedeliveryservice;
 import android.content.Intent;
 import android.os.Bundle;
+import android.renderscript.RenderScript;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -50,7 +51,9 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
         String BaySel = "Bay: "+String.valueOf(baySel);
         setContentView(R.layout.bay_dashboard);
         TextView textView = (TextView) findViewById(R.id.bay_rec);
-        textView.setText(PriorityAlgorithm.baySel);
+        PriorityAlgorithm baysel = new PriorityAlgorithm();
+        int baySel = baysel.getBaySel();
+        textView.setText(baySel);
 
     }
 

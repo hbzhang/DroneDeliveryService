@@ -2,15 +2,9 @@ package com.example.dronedeliveryservice;
 
 import android.content.Intent;
 
-import java.util.Scanner;
 import java.sql.Connection;
 import java.sql.*;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PriorityAlgorithm extends AppCompatActivity{
@@ -20,7 +14,7 @@ public class PriorityAlgorithm extends AppCompatActivity{
 	private PreparedStatement preparedStatement = null;
 	private ResultSet resultSet = null;
 	int dist;
-	public static int baySel;
+	private int baySel;
 
 
 	public void readDataBase() throws Exception {
@@ -192,7 +186,11 @@ public class PriorityAlgorithm extends AppCompatActivity{
 		int [] batt = {80,70,90,40,85,100};
 		int weight = Integer.parseInt(product_weight_key);
 		baySel = superAlgo(bay,dist,batt,weight);
+		this.baySel=baySel;
+	}
 
+	public int getBaySel(){
+		return this.baySel;
 	}
  
 }
