@@ -14,7 +14,7 @@ public class PriorityAlgorithm extends AppCompatActivity{
 	private PreparedStatement preparedStatement = null;
 	private ResultSet resultSet = null;
 	int dist;
-	private int baySel;
+	private int baySel=1;
 
 
 	public void readDataBase() throws Exception {
