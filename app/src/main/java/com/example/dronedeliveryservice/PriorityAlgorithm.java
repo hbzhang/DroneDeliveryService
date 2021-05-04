@@ -177,10 +177,9 @@ public class PriorityAlgorithm extends AppCompatActivity{
 		}
 	}
 	
-	public void main(String ags[]){
+	public void main(){
 		Intent intent2 = getIntent();
 		String product_weight_key = intent2.getStringExtra("product_weight_key");
-
 		int [] bay = {1,1,2,2,3,3};
 		int [] batt = {80,70,90,40,85,100};
 		int weight = Integer.parseInt(product_weight_key);
