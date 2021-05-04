@@ -16,7 +16,7 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
 
     //public static int baySel;
     //int baySel=0;
-    public static void client () {
+    /*public static void client () {
 
         try {
             Socket s=new Socket("172.16.33.86",6666);
@@ -38,7 +38,7 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
             ss.close();
         }catch(Exception e){System.out.println(e);}
 
-    }
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
