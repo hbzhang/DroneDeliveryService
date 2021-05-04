@@ -19,7 +19,7 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
     public static void client () {
 
         try {
-            Socket s=new Socket("10.12.18.102",6666);
+            Socket s=new Socket("172.16.33.86",6666);
             DataOutputStream dout=new DataOutputStream(s.getOutputStream());
             dout.writeInt(3);
             dout.flush();
