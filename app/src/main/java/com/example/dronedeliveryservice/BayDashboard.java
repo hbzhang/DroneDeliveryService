@@ -52,8 +52,8 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.bay_dashboard);
         TextView textView = (TextView) findViewById(R.id.bay_rec);
         PriorityAlgorithm baysel = new PriorityAlgorithm();
-        int baySel = baysel.getBaySel();
-        textView.setText(baySel);
+        //int baySel = baysel.getBaySel();
+        //textView.setText(baySel);
 
     }
 
