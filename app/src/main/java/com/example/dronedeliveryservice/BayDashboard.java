@@ -14,7 +14,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 
 public class BayDashboard extends AppCompatActivity implements View.OnClickListener {
 
-    public static int baySel;
+    //public static int baySel;
     //int baySel=0;
     public static void client () {
 
@@ -45,12 +45,13 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bay_dashboard);
         Button dashboard_bay1 = (Button) findViewById(R.id.dashboard_bay1);
-        dashboard_bay1.setOnClickListener(this);
-        client();
-        String BaySel = "Bay: "+String.valueOf(baySel);
+        //client();
+        PriorityAlgorithm prio = new PriorityAlgorithm();
+        String BaySel = "Bay: "+prio.getBaySel();
         setContentView(R.layout.bay_dashboard);
         TextView textView = (TextView) findViewById(R.id.bay_rec);
-        textView.setText(baySel);
+        textView.setText(BaySel);
+        dashboard_bay1.setOnClickListener(this);
 
     }
 
