@@ -44,7 +44,6 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bay_dashboard);
-
         Button dashboard_bay1 = (Button) findViewById(R.id.dashboard_bay1);
         dashboard_bay1.setOnClickListener(this);
         client();

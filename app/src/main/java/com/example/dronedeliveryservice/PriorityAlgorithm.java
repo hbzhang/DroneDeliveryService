@@ -56,9 +56,8 @@ public class PriorityAlgorithm extends AppCompatActivity{
 			// Statements allow to issue SQL queries to the database
 			statement = connect.createStatement();
 			// Result set get the result of the SQL query
-			resultSet = statement
-					.executeQuery(x);
-			writeResultSet(resultSet);
+			resultSet = statement.executeQuery(x);
+			//writeResultSet(resultSet);
 			//dist = sendResultSet(resultSet);
 
 		} catch (Exception e) {
