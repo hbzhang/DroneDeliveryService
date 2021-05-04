@@ -47,7 +47,7 @@ public class BayDashboard extends AppCompatActivity implements View.OnClickListe
         Button dashboard_bay1 = (Button) findViewById(R.id.dashboard_bay1);
         //client();
         PriorityAlgorithm prio = new PriorityAlgorithm();
-        prio.main();
+        prio.execute();
         String BaySel = "Bay: "+prio.getBaySel();
         setContentView(R.layout.bay_dashboard);
         TextView textView = (TextView) findViewById(R.id.bay_rec);
